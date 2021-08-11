@@ -2,6 +2,19 @@
     align-items: center;
     margin-top: 10px;
 }
-#boton-container{
+.txt-center{
     text-align: center;
+}
+.help-btn{
+    border-radius: 45%;
+    font-size: x-small;
+}
+
+.container{
+    margin-bottom: 20px;
+}
+
+.without-border{
+    border-style: hidden ;
+    
 }
