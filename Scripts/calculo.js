@@ -1,5 +1,8 @@
+
 $(document).ready(function(){
+
     $('#simular').click(function(){
+
         if(validation()==true){
         
             var K = parseFloat(document.getElementById("capital").value)
@@ -42,6 +45,7 @@ $(document).ready(function(){
         $('#totalPrestamo').text(allPrestamo.toFixed(2));
         }
     })
+
     $('#tea').blur(function(){
         let tea = parseFloat($('#tea').val()/100) //en jquery para obtener el valor de un input se usa val()
         let tem = valTEM(tea)
@@ -80,7 +84,13 @@ $(document).ready(function(){
         $('#tea').val(tea.toFixed(2));
         $('#periodo').focus();
     })
-
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl)
+    })
+    var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
+        trigger: 'focus'
+      })
 })
 
 function valCuota(){
